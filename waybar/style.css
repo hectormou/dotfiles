@@ -1,3 +1,5 @@
+@import "frappe.css";
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -5,20 +7,13 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0); /* Transparente */
+    background-color: transparent;
     color: #ffffff;
 }
 
-.modules-left {
-    margin-left: 10px;
-}
+.modules-left,
+.modules-right,
 .modules-center{
-    margin-top: 5px;     /* Distancia desde arriba */
-    margin-bottom: 2px;
-    padding: 2px 8px;    /* Padding vertical bajo para que sea fina */
-}
-.modules-right {
-    margin-right: 10px;
 }
 
 #window,
@@ -27,14 +22,10 @@ window#waybar {
 #network,
 #cpu,
 #memory,
-#disk,
-#temperature,
+#pulseaudio,
 #battery,
-#bluetooth
-#tray {
+#bluetooth {
     padding: 0 10px;
-    color: #ffffff;
-    background-color: #313244; /* Color de fondo de la cápsula */
+    background-color: @mauve; /* Color de fondo de la cápsula */
     border-radius: 20px;       /* Bordes redondeados */
-    margin: 4px 2px;           /* Separación entre módulos */
 }
