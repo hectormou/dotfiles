@@ -1,10 +1,11 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 8, // Gaps between modules (4px)
+    "margin-top": 10,
     "margin-left": 10,
     "margin-right":10,
 
@@ -18,10 +19,9 @@
     ],
     "modules-right": [
         "network",
+	"pulseaudio",
         "cpu",
         "memory",
-	"disk",
-        "temperature",
         "battery",
 	"bluetooth"
     ],
@@ -44,7 +44,7 @@
          }
      },
      "cpu": {
-	"format": "  {usage}%", // El icono viene de la fuente Nerd Font
+	"format": "  {usage}%",
 	"interval": 10
      },
      "memory": {
