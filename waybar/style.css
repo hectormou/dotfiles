@@ -1,4 +1,4 @@
-@import "frappe.css";
+@import url("/home/god/dotfiles/waybar/themes/frappe.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -8,7 +8,7 @@
 
 window#waybar {
     background-color: transparent;
-    color: #ffffff;
+    color: #ffffff;  /*cambiar a tema catppuccin*/
 }
 
 .modules-left,
@@ -20,11 +20,13 @@ window#waybar {
 #workspaces,
 #clock,
 #network,
-#cpu,
-#memory,
 #pulseaudio,
 #battery,
-#bluetooth {
+#backlight,
+#cpu,
+#memory,
+#bluetooth,
+#custom-power {
     padding: 0 10px;
     background-color: @mauve; /* Color de fondo de la cápsula */
     border-radius: 20px;       /* Bordes redondeados */

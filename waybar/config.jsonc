@@ -4,57 +4,114 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     // "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 8, // Gaps between modules (4px)
+    "spacing": 8, // Gaps between modules (8px)
     "margin-top": 10,
     "margin-left": 10,
     "margin-right":10,
 
     // Choose the order of the modules
     "modules-left": [
-    	"hyprland/window"
+    	//"hyprland/window"
+	"hyprland/workspaces"
     ],
     "modules-center": [
-	"hyprland/workspaces",
 	"clock"
     ],
     "modules-right": [
         "network",
 	"pulseaudio",
-        "cpu",
-        "memory",
         "battery",
-	"bluetooth"
+	"backlight",
+        //"cpu",
+        "memory",
+	"bluetooth",
+	"custom/power"
     ],
     // Modules configuration
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{name}: {icon}",
-         "format-icons": {
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}: {icon}",
+        "format-icons": {
 	//iconos chulos por defecto para los workspaces
-        //     "1": "",
+            "1": "",
         //     "2": "",
         //     "3": "",
         //     "4": "",
         //     "5": "",
-             "urgent": "",
-             "active": "",
-             "default": ""
-         }
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+    "clock": {
+        "timezone": "Europe/Spain"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid}  ", //({signalStrength}%)
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        //"tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}"
      },
-     "cpu": {
+    "cpu": {
 	"format": "  {usage}%",
 	"interval": 10
-     },
-     "memory": {
-	"format": "  {}%"
-     },
-     "pulseaudio": {
-	"format": "{icon} {volume}%",
-	"format-muted": " ",
-	"format-icons": {
-        "default": ["", "", ""]
-        }
-     }
+    },
+    "memory": {
+        "format": "  {}%"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        //"format-bluetooth": "{volume}% {icon}",
+        //"format-bluetooth-muted": "{icon}",
+        //"format-muted": " ",
+	"format-muted": "󰟎",  //como no hay modulo especifico hay que hacerlo a lo gitano
+
+	//añadir {format_source} en los demas para que aparezca el micro
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "default": ["", "", ""]
+        },
+        //"on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+	"format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+	"states": {
+            // "good": 95,
+	    "warning": 30,
+	    "critical": 15
+	},
+	"format": "{capacity}% {icon}",
+	"format-full": "{capacity}% {icon}",
+	//"format-charging": "{capacity}% ",
+	"format-plugged": "{capacity}% ",
+	//"format-alt": "{time} {icon}",
+	// "format-good": "", // An empty format will hide the module
+	// "format-full": "",
+	"format-icons": ["", "", "", "", ""]
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+	"tooltip": false,
+	"menu": "on-click",
+	"menu-file": "$HOME/dotfiles/waybar/custom/power_menu.xml", // Menu file in resources folder
+	"menu-actions": {
+	    "shutdown": "shutdown",
+	    "reboot": "reboot",
+	    "suspend": "systemctl suspend",
+	    "hibernate": "systemctl hibernate"
+	}
+    }
 }
