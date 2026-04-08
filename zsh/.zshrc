@@ -73,7 +73,7 @@ ZSH_CUSTOM=$ZSH/custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting docker docker-compose)
 
 # carga de la configuracion
 source $ZSH/oh-my-zsh.sh
@@ -121,6 +121,7 @@ setopt HIST_IGNORE_DUPS
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
 #
 #
 #  Lanzamiento automatico de Hyprland
