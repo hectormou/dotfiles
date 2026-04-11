@@ -73,11 +73,12 @@ ZSH_CUSTOM=$ZSH/custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting docker docker-compose)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+# docker docker-compose
 
 # carga de la configuracion
 source $ZSH/oh-my-zsh.sh
-source $ZDOTDIR/aliases.zsh
+source $ZDOTDIR/alias.zsh
 
 # gestion de cache
 export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh/oh-my-zsh"

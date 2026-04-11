@@ -10,7 +10,3 @@ alias chess='brave "https://www.chess.com/home"'
 alias spotify='brave "https://open.spotify.com/intl-es/"'
 alias outlook='brave "https://outlook.office.com/mail/0/?deeplink=mail%2F0%2F%3Fnlp%3D0"'
 alias cookie='brave "https://orteil.dashnet.org/cookieclicker/"'
-
-#NVIM alias
-alias zshconfig='nvim $ZDOTDIR/.zshrc'
-alias zshalias='nvim $ZDOTDIR/aliases.zsh'
