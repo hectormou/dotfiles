@@ -27,3 +27,4 @@ hyprpolkitagent --> hyprland-qt-support ## sustituye al de kde
 ## hyprpwcenter ## !!! es solo para pipewire, tratar de combinarlo con waybar, pwcenter despliega una barra para gestionar temas como el volumen
 blueman ## acordarse de activar el bluetooth nada mas iniciar el equipo, /etc/bluetooth/main.conf Autoenable = true
 brightnessctl ## para regular el brillo de la pantalla
+starship ## promp visual de terminal
