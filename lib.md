@@ -2,7 +2,7 @@
 hyprland   ## junto pipewire
 ##uwsm   ## no parece estar rentando, hay que admitir que ya se le ha echado en falta, caso crasheo hyprland con brave activ, hay que admitir que ya se le ha echado en falta, caso crasheo hyprland con brave activo
 xdg-desktop-portal-hyprland ## Warning XDPH doesn’t implement a file picker. For that, it is recommended to install xdg-desktop-portal-gtk alongside XDPH.
-xdg-desktop-portal-gtk nwg-look ## el segundo para customizarlo
+xdg-desktop-portal-gtk nwg-look ## el segundo para customizarlo !!!!! editar su config para solo gtk-4.0 y gtk-3.0 (tema adw-gtk-theme)
 kitty
 dbus-broker   ## ya está instalado para este punto
 qt5-wayland
