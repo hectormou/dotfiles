@@ -20,3 +20,5 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
     export EDITOR='nvim'
 fi
+
+source "$XDG_DATA_HOME/rust/cargo/env"

@@ -111,6 +111,10 @@ if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec start-hyprland
 fi
 
+# Variables de entorno de Rust
+export CARGO_HOME="$XDG_DATA_HOME/rust/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rust/rustup"
+
 # Variables de entorno Starship
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml" 
 export STARSHIP_CACHE="$XDG_CACHE_HOME/starship/session_${STARSHIP_SESSION_KEY}.log"
