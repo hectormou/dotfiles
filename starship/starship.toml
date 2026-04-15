@@ -11,6 +11,7 @@ $directory\
 $git_branch\
 $git_state\
 [](fg:git bg:module)\
+$c\
 $rust\
 [](fg:module bg:clock)\
 $time\
@@ -50,6 +51,12 @@ revert = '[🚑 REVERTING](bold bright-red)'
 symbol = "🦀"  # 
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:dir bg:#212736)]($style)'
+
+[c]
+symbol = "⚡"
+style = "bg:#212736"
+format = "[$symbol($version(-$name) )]($style)"
+detect_extensions = ["c", "h"]
 
 [time]
 disabled = false
