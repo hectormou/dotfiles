@@ -28,3 +28,7 @@ hyprpolkitagent --> hyprland-qt-support ## sustituye al de kde
 blueman ## acordarse de activar el bluetooth nada mas iniciar el equipo, /etc/bluetooth/main.conf Autoenable = true
 brightnessctl ## para regular el brillo de la pantalla
 starship ## promp visual de terminal
+rust y visual studio
+gnome-keyring ## secret-tool (permite acceder a cualquier servicio que implemente la API Dbus Secret Service API) ## pam_gnome_keyring (configurar para desbloquear el llavero al introducir contraseña de usuario para desbloquear la pantalla de bloqueo)
+libsecret ## para permitir a las apps acceder al llavero
+seahorse ## para obtener una gui
