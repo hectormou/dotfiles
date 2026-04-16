@@ -28,3 +28,5 @@ hyprpolkitagent --> hyprland-qt-support ## sustituye al de kde
 blueman ## acordarse de activar el bluetooth nada mas iniciar el equipo, /etc/bluetooth/main.conf Autoenable = true
 brightnessctl ## para regular el brillo de la pantalla
 starship ## promp visual de terminal
+rust y visual studio
+gnome-keyring libsecret seahorse

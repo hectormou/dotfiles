@@ -115,6 +115,10 @@ fi
 export CARGO_HOME="$XDG_DATA_HOME/rust/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rust/rustup"
 
+# Variables de entorno OS_KEYRING
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
+
 # Variables de entorno Starship
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml" 
 export STARSHIP_CACHE="$XDG_CACHE_HOME/starship/session_${STARSHIP_SESSION_KEY}.log"
