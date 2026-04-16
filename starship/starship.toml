@@ -1,0 +1,104 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+palette= "tokyonight"
+
+format = """
+[░▒▓](#a3aed2)\
+[ 󰣇 ](bg:logo fg:black)\
+[](fg:logo bg:dir)\
+$directory\
+[](fg:dir bg:git)\
+$git_branch\
+$git_state\
+[](fg:git bg:module)\
+$c\
+$java\
+$rust\
+$rlang\
+[](fg:module bg:clock)\
+$time\
+[ ](fg:clock)\
+$username\
+$cmd_duration\
+\n$character"""
+
+[directory]
+style = "fg:white bg:dir"
+read_only_style = "bg:maroon"
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = "🔒"
+
+[directory.substitutions]
+"Downloads" = " "
+"dotfiles" = "👻"    # 🏗️ ⚙️ 🚧
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:git"
+format = '[[ $symbol $branch ](fg:dir bg:git)]($style)'
+
+[git_status]
+style = "bg:git"
+format = '[[($all_status$ahead_behind )](fg:dir bg:git)]($style)'
+
+[git_state]
+style = "bg:git"
+format = '[\($state( $progress_current of $progress_total)\)]($style)'
+cherry_pick = '[🍒 PICKING](bold maroon $style)'
+rebase = '[🏗️ REBASING](bold peach $style)'
+merge = '[🧬 MERGING](bold sapphire $style)'
+bisect = '[🕵️ BISECTING](bold sapphire $style)'
+revert = '[🚑 REVERTING](bold white $style)'
+
+[rust]
+symbol = " 🦀"  # 
+style = "fg:white bg:module"
+format = "[$symbol ($version) ]($style)"
+
+[c]
+symbol = " ⚡"
+style = "fg:white bg:module"
+format = "[$symbol ($version(-$name) )]($style)"
+detect_extensions = ["c", "h"]
+
+[rlang]
+symbol = " 📐"
+style = "fg:white bg:module"
+format = "[$symbol ($version) ]($style)"
+
+[java]
+symbol = " ☕"
+style = "fg:white bg:module"
+format = "[$symbol ($version) ]($style)"
+detect_extensions = ["java", "jar", "class"]
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "fg:mauve bg:clock"
+format = "[  $time ]($style)"
+
+[cmd_duration]
+min_time = 2_000
+show_milliseconds = false
+
+[username]
+show_always=false
+format = "[👤 $user]($style) "
+
+[palettes.tokyonight]
+black = "#090c0c"
+white = "#e3e5e5"
+mauve = "#a0a9cb"
+sapphire = "#7dc4e4"
+peach = "#fab387"
+maroon = "#e64553"
+
+logo = "#a3aed2"
+dir = "#769ff0"
+git = "#394260"
+module = "#212736"
+clock = "#1d2230"

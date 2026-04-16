@@ -11,7 +11,7 @@ export ZSH="$ZDOTDIR/oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="quantum"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,10 +69,6 @@ ZSH_THEME="quantum"
 ZSH_CUSTOM=$ZSH/custom
 
 # Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 # docker docker-compose
 
@@ -98,16 +94,6 @@ setopt HIST_IGNORE_DUPS
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
@@ -119,13 +105,19 @@ setopt HIST_IGNORE_DUPS
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-#
-#
-#  Lanzamiento automatico de Hyprland
+# Lanzamiento automatico de Hyprland
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec start-hyprland
 fi
+
+# Variables de entorno de Rust
+export CARGO_HOME="$XDG_DATA_HOME/rust/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rust/rustup"
+
+# Variables de entorno Starship
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml" 
+export STARSHIP_CACHE="$XDG_CACHE_HOME/starship/session_${STARSHIP_SESSION_KEY}.log"
+
+# Cargar Starship
+eval "$(starship init zsh)"
