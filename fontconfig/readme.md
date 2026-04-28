@@ -1,0 +1,1 @@
+Este archivo es necesario para interceptar las peticiones de la fuente del sistema "system-ui" para enviar en su lugar la que deseemos. Hasta ahora se ha usado para cambiar la fuente que no es de páginas en brave.
