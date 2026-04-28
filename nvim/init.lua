@@ -1,3 +1,5 @@
+-- La mayoria de configuraciones y funciones inteligentes son de:
+-- @https://github.com/hugoocoto
 -------------------------------------------------------------------------------
 -- Options
 -------------------------------------------------------------------------------
