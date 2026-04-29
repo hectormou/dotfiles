@@ -3,6 +3,7 @@
 ## Instalados
 * hyprland pipewire (importante la escala del monitor)
 * kitty
+* nvim
 * dbus-broker
 * xdg-desktop-portal-hyprland xdg-desktop-portal-gtk (file picker para descargar cosas del navegador)
 * nautilus gnome-keyring libsecret seahorse
