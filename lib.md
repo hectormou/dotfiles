@@ -25,6 +25,7 @@
 * hypridle
 * hyprpaper
 * starship
+* docker
 
 
 ## No Instalados
@@ -32,5 +33,7 @@
 * hyprpwcenter (es solo para pipewire, tratar de combinarlo con waybar, pwcenter despliega una barra para gestionar temas como el volumen)
 
 ## Plugins de zsh
-
 zsh-autosuggestions zsh-syntax-highlighting
+
+## Docker
+Por comodidad, se ha añadido el usuario al grupo docker para permitir usar la utilidad sin estar elevando todo el tiempo a sudo.

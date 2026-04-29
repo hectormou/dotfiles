@@ -24,8 +24,8 @@ vim.o.updatetime = 1000             -- slower idle update events
 vim.o.conceallevel = 0              -- show concealed text plainly
 vim.o.lazyredraw = true             -- skip some intermediate redraws
 
---vim.o.colorcolumn = "+0"            -- highlight at textwidth
-vim.o.textwidth = 80                -- preferred line width
+-- vim.o.colorcolumn = "+0"            -- highlight at textwidth
+-- vim.o.textwidth = 80                -- preferred line width
 vim.o.signcolumn = "yes"            -- always show sign column
 
 vim.o.swapfile = false              -- disable swap files
