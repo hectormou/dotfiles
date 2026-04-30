@@ -1,123 +1,38 @@
+# Cuando se cargan shells interactivas #3
+
 # Estandar XDG Personales
 export XDG_PICTURES_DIR="$HOME/capturas"
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$ZDOTDIR/oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# Tema seleccionado
 ZSH_THEME=""
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
+# Carpeta donde incluir plugins y configuraciones custom de oh-my-zsh
 ZSH_CUSTOM=$ZSH/custom
 
-# Which plugins would you like to load?
+# Lista de plugins añadidos
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 # docker docker-compose
 
-# carga de la configuracion
+# Carga de la configuracion
 source $ZSH/oh-my-zsh.sh
 source $ZDOTDIR/alias.zsh
 
-# gestion de cache
+# Gestion de cache
 export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh/oh-my-zsh"
 
-# gestion de compdumb
+# Gestion de compdumb
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/compdump/zcompdump-$HOST-$ZSH_VERSION"
 
-# configurar el historial
+# Configurar el historial
 export HISTFILE="$ZDOTDIR/.zsh_history"
 export HISTSIZE=10000
 export SAVEHIST=10000
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-#
-# Lanzamiento automatico de Hyprland
-if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec start-hyprland
-fi
-
-# Variables de entorno de Rust
-export CARGO_HOME="$XDG_DATA_HOME/rust/cargo"
-export RUSTUP_HOME="$XDG_DATA_HOME/rust/rustup"
-
-# Variables de entorno OS_KEYRING
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
 
 # Variables de entorno Starship
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml" 
