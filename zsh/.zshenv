@@ -1,3 +1,5 @@
+# Cuando se carga cualquier shell #1
+
 # Variables de entorno
 if [[ -z "$EDITOR" ]]; then
     export EDITOR="nvim"

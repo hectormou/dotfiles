@@ -1,3 +1,5 @@
+# Cuando se cargan shells interactivas #3
+
 # Estandar XDG Personales
 export XDG_PICTURES_DIR="$HOME/capturas"
 
@@ -38,8 +40,3 @@ export STARSHIP_CACHE="$XDG_CACHE_HOME/starship/session_${STARSHIP_SESSION_KEY}.
 
 # Cargar Starship
 eval "$(starship init zsh)"
-
-# Lanzamiento automatico de Hyprland
-if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec start-hyprland
-fi
