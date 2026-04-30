@@ -26,11 +26,12 @@
 * hyprpaper
 * starship
 * docker
-
+* jdk-openjdk
 
 ## No Instalados
 * uwsm (encapsular la sesión de wayland)
 * hyprpwcenter (es solo para pipewire, tratar de combinarlo con waybar, pwcenter despliega una barra para gestionar temas como el volumen)
+* java-openjdk-wakefield (implementacion nativa de JDK para Wayland)
 
 ## Plugins de zsh
 zsh-autosuggestions zsh-syntax-highlighting
