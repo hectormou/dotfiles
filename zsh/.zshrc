@@ -1,8 +1,5 @@
 # Cuando se cargan shells interactivas #3
 
-# Estandar XDG Personales
-export XDG_PICTURES_DIR="$HOME/capturas"
-
 # Path to your Oh My Zsh installation.
 export ZSH="$ZDOTDIR/oh-my-zsh"
 
@@ -10,7 +7,7 @@ export ZSH="$ZDOTDIR/oh-my-zsh"
 ZSH_THEME=""
 
 # Carpeta donde incluir plugins y configuraciones custom de oh-my-zsh
-ZSH_CUSTOM=$ZSH/custom
+export ZSH_CUSTOM="$ZSH/custom"
 
 # Lista de plugins añadidos
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
@@ -35,8 +32,11 @@ setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 
 # Variables de entorno Starship
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml" 
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export STARSHIP_CACHE="$XDG_CACHE_HOME/starship/session_${STARSHIP_SESSION_KEY}.log"
 
 # Cargar Starship
 eval "$(starship init zsh)"
+
+# Añadir binarios de rust por si no están en el PATH
+source "$XDG_DATA_HOME/rust/cargo/env"
