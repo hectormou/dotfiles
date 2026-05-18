@@ -27,6 +27,7 @@
 * starship
 * docker
 * jdk-openjdk
+* hyprshutdown
 
 ## No Instalados
 * uwsm (encapsular la sesión de wayland)
