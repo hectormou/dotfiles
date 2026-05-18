@@ -1,7 +1,7 @@
 # Historial de paquetes añadidos
 
 ## Instalados
-* hyprland pipewire (importante la escala del monitor)
+* hyprland pipewire
 * kitty
 * nvim
 * dbus-broker
@@ -17,7 +17,7 @@
 * brightnessctl (para regular el brillo de la pantalla)
 * waybar
 * sddm
-* wofi
+* hyprlauncher && wofi (migracion en proceso)
 * hyprshot (agrega slum y grim como dependencias)
 * swaync (libnotify ya se encontraba instalado, se podria investigar mas en el tema)
 * hyprpolkitagent  (sustituye a hyprplokitkdeagent)
