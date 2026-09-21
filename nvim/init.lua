@@ -1,3 +1,5 @@
+-- La mayoria de configuraciones y funciones inteligentes son de:
+-- @https://github.com/hugoocoto
 -------------------------------------------------------------------------------
 -- Options
 -------------------------------------------------------------------------------
@@ -22,8 +24,8 @@ vim.o.updatetime = 1000             -- slower idle update events
 vim.o.conceallevel = 0              -- show concealed text plainly
 vim.o.lazyredraw = true             -- skip some intermediate redraws
 
-vim.o.colorcolumn = "+0"            -- highlight at textwidth
-vim.o.textwidth = 80                -- preferred line width
+-- vim.o.colorcolumn = "+0"            -- highlight at textwidth
+-- vim.o.textwidth = 80                -- preferred line width
 vim.o.signcolumn = "yes"            -- always show sign column
 
 vim.o.swapfile = false              -- disable swap files
@@ -178,3 +180,20 @@ vim.lsp.enable({
 -------------------------------------------------------------------------------
 -- Misc
 -------------------------------------------------------------------------------
+-- Evitar abrir PDFs en nvim para no corromperlos
+vim.api.nvim_create_autocmd("BufReadCmd", {
+    pattern = "*.pdf",
+    callback = function(ev)
+        -- Usamos vim.schedule para que el buffer se cierre de forma segura 
+        -- después de que Neovim termine de procesar el evento actual.
+        vim.schedule(function()
+            -- Cierra el buffer del PDF sin guardar
+            vim.api.nvim_buf_delete(ev.buf, { force = true })
+            -- Muestra el mensaje informativo
+            vim.notify(
+                "Protección activada: Se evitó abrir un archivo PDF.\n",
+                vim.log.levels.WARN
+            )
+        end)
+    end,
+})
