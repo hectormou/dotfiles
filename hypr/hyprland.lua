@@ -17,7 +17,7 @@ hl.monitor({
 local mainMod = "ALT"
 local terminal = "kitty"
 local fileManager = "nautilus"
-local menu = "wofi --show drun"
+local menu = "hyprtile"
 
 -- ################
 -- ## AUTOSTART ###
@@ -290,7 +290,7 @@ local suppressMaximizeRule = hl.window_rule({
     name  = "suppress-maximize-events",
     match = { class = ".*" },
 
-    suppress_event = "maximize",
+    suppress_event = "maximize"
 })
 -- suppressMaximizeRule:set_enabled(false)
 
@@ -306,7 +306,7 @@ hl.window_rule({
         pin        = false,
     },
 
-    no_focus = true,
+    no_focus = true
 })
 
 -- Hyprland-run windowrule
@@ -315,26 +315,33 @@ hl.window_rule({
     match = { class = "hyprland-run" },
 
     move  = "20 monitor_h-120",
-    float = true,
+    float = true
 })
 
 hl.window_rule({
     name = "brave-fullscreen",
     match = { class = "brave-browser" },
-    fullscreen_state = "2 0",
+    fullscreen_state = "2 0"
 })
+
 hl.window_rule({
     name = "code-fullscreen",
     match = { class = "code" },
-    fullscreen_state = "2 0",
+    fullscreen_state = "2 0"
+})
+
+hl.window_rule({
+    name = "hyprtile-custom",
+    match = { class = "hyprtile" },
+    fullscreen_state = "2 2"
 })
 
 -- =====================================================================
--- WORKSPACE ESPECIAL: VISUAL STUDIO CODE (SCRATCHPAD)
+-- WORKSPACE ESPECIAL: VISUAL STUDIO CODE
 -- =====================================================================
 hl.bind(mainMod .. " + V", hl.dsp.workspace.toggle_special("Code"))
 hl.window_rule({
     name = "code-special",
     match = { class = "code" },
-    workspace = "special:Code",
+    workspace = "special:Code"
 })

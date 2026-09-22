@@ -16,8 +16,6 @@
 * blueman (acordarse de activar el bluetooth nada mas iniciar el equipo, /etc/bluetooth/main.conf Autoenable = true)
 * brightnessctl (para regular el brillo de la pantalla)
 * waybar
-* sddm
-* hyprlauncher && wofi (migracion en proceso)
 * hyprshot (agrega slum y grim como dependencias)
 * swaync (libnotify ya se encontraba instalado, se podria investigar mas en el tema)
 * hyprpolkitagent  (sustituye a hyprplokitkdeagent)
@@ -28,6 +26,7 @@
 * docker
 * jdk-openjdk
 * hyprshutdown
+* hyprtile ( y las 50 cosas que trae) && wofi            !!!!!!!!!!!!! pendiente eliminar nmtui y blueman
 
 ## No Instalados
 * uwsm (encapsular la sesión de wayland)
