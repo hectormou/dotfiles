@@ -5,6 +5,7 @@
 * kitty
 * nvim
 * dbus-broker
+* openssh
 * xdg-desktop-portal-hyprland xdg-desktop-portal-gtk (file picker para descargar cosas del navegador)
 * nautilus gnome-keyring libsecret seahorse
 * hyprland-qt-support qt5-wayland qt6-wayland
@@ -26,7 +27,7 @@
 * docker
 * jdk-openjdk
 * hyprshutdown
-* hyprtile ( y las 50 cosas que trae) && wofi            !!!!!!!!!!!!! pendiente eliminar nmtui y blueman
+* hyprlauncher hyprtoolkit
 
 ## No Instalados
 * uwsm (encapsular la sesión de wayland)
