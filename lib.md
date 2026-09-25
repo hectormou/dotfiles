@@ -5,6 +5,7 @@
 * kitty
 * nvim
 * dbus-broker
+* openssh
 * xdg-desktop-portal-hyprland xdg-desktop-portal-gtk (file picker para descargar cosas del navegador)
 * nautilus gnome-keyring libsecret seahorse
 * hyprland-qt-support qt5-wayland qt6-wayland
@@ -16,8 +17,6 @@
 * blueman (acordarse de activar el bluetooth nada mas iniciar el equipo, /etc/bluetooth/main.conf Autoenable = true)
 * brightnessctl (para regular el brillo de la pantalla)
 * waybar
-* sddm
-* hyprlauncher && wofi (migracion en proceso)
 * hyprshot (agrega slum y grim como dependencias)
 * swaync (libnotify ya se encontraba instalado, se podria investigar mas en el tema)
 * hyprpolkitagent  (sustituye a hyprplokitkdeagent)
@@ -28,6 +27,7 @@
 * docker
 * jdk-openjdk
 * hyprshutdown
+* hyprlauncher hyprtoolkit
 
 ## No Instalados
 * uwsm (encapsular la sesión de wayland)
