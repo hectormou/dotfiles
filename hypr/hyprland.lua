@@ -36,9 +36,7 @@ hl.on("hyprland.start", function()
 end)
 
 -- ############################
-
 -- ## ENVIRONMENT VARIABLES ###
-
 -- ############################
 
 hl.env("XCURSOR_SIZE", "24")
@@ -51,26 +49,33 @@ hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
+local home = os.getenv("HOME")
+local xdg_config_home = home .. "/.config"
+local xdg_data_home = home .. "/.local/share"
+local xdg_cache_home = home .. "/.cache"
+local xdg_state_home = home .. "/.local/state"
+local xdg_pictures_dir_home = home .. "/capturas"
+
 -- XDG Specifications
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
-hl.env("XDG_CONFIG_HOME", "$HOME/.config")
-hl.env("XDG_DATA_HOME", "$HOME/.local/share")
-hl.env("XDG_CACHE_HOME", "$HOME/.cache")
-hl.env("XDG_STATE_HOME", "$HOME/.local/state")
-hl.env("XDG_PICTURES_DIR", "$HOME/capturas")
+hl.env("XDG_CONFIG_HOME", xdg_config_home)
+hl.env("XDG_DATA_HOME", xdg_data_home)
+hl.env("XDG_CACHE_HOME", xdg_cache_home)
+hl.env("XDG_STATE_HOME", xdg_state_home)
+hl.env("XDG_PICTURES_DIR", xdg_pictures_dir_home)
 
 -- Variables de entorno Hyprshot
-hl.env("HYPRSHOT_DIR", "$HOME/capturas")
+hl.env("HYPRSHOT_DIR", xdg_pictures_dir_home)
 
 -- Variables de entorno OS_KEYRING
-hl.env("GNUPGHOME", "$XDG_DATA_HOME/gnupg")
-hl.env("DOTNET_CLI_HOME", "$XDG_DATA_HOME/dotnet")
+hl.env("GNUPGHOME", xdg_data_home .. "/gnupg")
+hl.env("DOTNET_CLI_HOME", xdg_data_home .. "/dotnet")
 
 -- Variables de entorno de Rust
-hl.env("CARGO_HOME", "$XDG_DATA_HOME/rust/cargo")
-hl.env("RUSTUP_HOME", "$XDG_DATA_HOME/rust/rustup")
+hl.env("CARGO_HOME", xdg_data_home .. "/rust/cargo")
+hl.env("RUSTUP_HOME", xdg_data_home .. "/rust/rustup")
 
 -- Misc
 hl.env("BROWSER", "brave")
